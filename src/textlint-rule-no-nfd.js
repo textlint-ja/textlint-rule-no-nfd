@@ -13,6 +13,9 @@ function reporter(context) {
             }
             const text = getSource(node);
             matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}) => {
+                if (index === 0) {
+                    return;
+                }
                 // \u309b\u309c => \u309a\u3099
                 const dakutenChars = text.slice(index - 1, index + 1);
                 const nfdlized = dakutenChars.replace("\u309B", "\u3099").replace("\u309C", "\u309A")
