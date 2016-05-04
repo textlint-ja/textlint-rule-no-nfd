@@ -12,9 +12,11 @@ function reporter(context) {
                 return;
             }
             const text = getSource(node);
-            matchCaptureGroupAll(text, /([\u309a\u3099])/g).forEach(({index}) => {
+            matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}) => {
+                // \u309b\u309c => \u309a\u3099
                 const dakutenChars = text.slice(index - 1, index + 1);
-                const expectedText = unorm.nfc(dakutenChars);
+                const nfdlized = dakutenChars.replace("\u309B", "\u3099").replace("\u309C", "\u309A")
+                const expectedText = unorm.nfc(nfdlized);
                 const ruleError = new RuleError(`Disallow to use NFD(well-known as Mac濁点): "${dakutenChars}" => "${expectedText}"`, {
                     index,
                     fix: fixer.replaceTextRange([index - 1, index + 1], expectedText)

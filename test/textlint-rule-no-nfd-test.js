@@ -11,7 +11,6 @@ tester.run("no-todo", rule, {
         "エンジン"
     ],
     invalid: [
-        // single match
         {
             text: "ホ\u309aケット",
             output: "ポケット",
@@ -24,11 +23,34 @@ tester.run("no-todo", rule, {
             ]
         },
         {
+            text: "ホ゜ケット",
+            output: "ポケット",
+            errors: [
+                {
+                    message: `Disallow to use NFD(well-known as Mac濁点): "ホ\u309c" => "ポ"`,
+                    line: 1,
+                    column: 2
+                }
+            ]
+        },
+        {
             text: "エンシ\u3099ン",
             output:"エンジン",
             errors: [
                 {
                     message: `Disallow to use NFD(well-known as Mac濁点): "シ\u3099" => "ジ"`,
+                    line: 1,
+                    column: 4
+                }
+            ]
+        },
+
+        {
+            text: "エンシ゛ン",
+            output:"エンジン",
+            errors: [
+                {
+                    message: `Disallow to use NFD(well-known as Mac濁点): "シ\u309b" => "ジ"`,
                     line: 1,
                     column: 4
                 }
