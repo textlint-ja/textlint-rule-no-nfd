@@ -1,6 +1,11 @@
 # textlint-rule-no-nfd [![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
 
-textlint rule that disallow to use NFD like UTF8-MAC 濁点.
+[textlint](https://textlint.github.io/ "textlint") rule that disallow to use NFD like UTF8-MAC 濁点.
+
+> ホ゜ケット
+> エンシ゛ン
+
+といったMac OS XでPDFやFinderからのコピペで問題となる濁点を見つけて、修正する[textlint](https://textlint.github.io/ "textlint")ルールです。
 
 ## Install
 
@@ -26,6 +31,13 @@ Via CLI
 ```
 textlint --rule no-nfd README.md
 ```
+
+## Fixable
+
+[![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
+
+`textlint --fix` での[自動修正](https://github.com/textlint/textlint/blob/master/docs/rule-fixer.md)に対応しています。
+
 
 ## Example
 

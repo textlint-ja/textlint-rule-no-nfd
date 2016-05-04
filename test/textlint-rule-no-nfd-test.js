@@ -16,7 +16,7 @@ tester.run("no-todo", rule, {
             output: "ポケット",
             errors: [
                 {
-                    message: `Disallow to use NFD(well-known as Mac濁点): "ホ\u309a" => "ポ"`,
+                    message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "ホ\u309a" => "ポ"`,
                     line: 1,
                     column: 2
                 }
@@ -27,7 +27,7 @@ tester.run("no-todo", rule, {
             output: "ポケット",
             errors: [
                 {
-                    message: `Disallow to use NFD(well-known as Mac濁点): "ホ\u309c" => "ポ"`,
+                    message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "ホ\u309c" => "ポ"`,
                     line: 1,
                     column: 2
                 }
@@ -38,7 +38,7 @@ tester.run("no-todo", rule, {
             output:"エンジン",
             errors: [
                 {
-                    message: `Disallow to use NFD(well-known as Mac濁点): "シ\u3099" => "ジ"`,
+                    message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "シ\u3099" => "ジ"`,
                     line: 1,
                     column: 4
                 }
@@ -50,7 +50,7 @@ tester.run("no-todo", rule, {
             output:"エンジン",
             errors: [
                 {
-                    message: `Disallow to use NFD(well-known as Mac濁点): "シ\u309b" => "ジ"`,
+                    message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "シ\u309b" => "ジ"`,
                     line: 1,
                     column: 4
                 }
