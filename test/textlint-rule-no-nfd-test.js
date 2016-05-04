@@ -5,7 +5,7 @@ const tester = new TextLintTester();
 // rule
 import rule from "../src/textlint-rule-no-nfd";
 // ruleName, rule, { valid, invalid }
-tester.run("no-todo", rule, {
+tester.run("no-nfd", rule, {
     valid: [
         "ポケット",
         "エンジン"
