@@ -29,13 +29,13 @@ textlint --rule no-nfd README.md
 
 ## Example
 
-゜(`\u309a`)
+゜or `\u309a`
 
     NG: ホ゜ケット
       : ホ\u309aケット
     OK: ポケット
     
-゛(`\u3099`)
+゛or `\u3099`
 
     NG: エンシ゛ン
       : エンシ\u3099ン
@@ -53,6 +53,32 @@ Install devDependencies and Run `npm test`:
     npm i -d && npm test
 
 ## Further Reading
+
+2種類の濁点
+
+以下はそれぞれ単独で存在できるVOICED SOUND MARK
+
+- ゜`\u309b`
+    - [Unicode Character 'KATAKANA-HIRAGANA VOICED SOUND MARK' (U+309B)](http://www.fileformat.info/info/unicode/char/309b/index.htm "Unicode Character &#39;KATAKANA-HIRAGANA VOICED SOUND MARK&#39; (U+309B)")
+- ゛`\u309c`
+    - [Unicode Character 'KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK' (U+309C)](http://www.fileformat.info/info/unicode/char/309c/index.htm "Unicode Character &#39;KATAKANA-HIRAGANA SEMI-VOICED SOUND MARK&#39; (U+309C)")
+    
+もう一つは、Combining Characterと呼ばれる結合する前提のCharacter(単独では存在できない)がある。
+
+- `\u3099` 
+    - e.g.) `ホ\u309aケット`
+- `\u309a`
+    - e.g.) `エンシ\u3099ン`
+
+
+![combining-character.png](./docs/img/combining-character.png)
+
+via [Unicodeの特殊な文字 “結合文字列” | ものかの](http://tama-san.com/combining_character_sequence/ "Unicodeの特殊な文字 “結合文字列” | ものかの")
+
+これらのそれぞれをチェックし、normalizeする。
+
+`String.prototype.normalize()`は、Combining Characterに対してのみ有効で、
+単独で存在できる゜`\u309b`と゛`\u309c`は置換することでnormalizeする。
 
 - [String.prototype.normalize() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)
 - [walling/unorm: JavaScript Unicode 8.0 Normalization - NFC, NFD, NFKC, NFKD.](https://github.com/walling/unorm)
@@ -75,7 +101,7 @@ For bugs and feature requests, [please create an issue](https://github.com/azu/t
 ## Author
 
 - [github/azu](https://github.com/azu)
-- [twitter/azu_re]http://twitter.com/azu_re)
+- [twitter/azu_re](http://twitter.com/azu_re)
 
 ## License
 
