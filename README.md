@@ -1,4 +1,4 @@
-# textlint-rule-no-nfd [![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
+# textlint-rule-no-nfd [![Build Status](https://travis-ci.org/azu/textlint-rule-no-nfd.svg?branch=master)](https://travis-ci.org/azu/textlint-rule-no-nfd) [![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
 
 [textlint](https://textlint.github.io/ "textlint") rule that disallow to use NFD like UTF8-MAC 濁点.
 
