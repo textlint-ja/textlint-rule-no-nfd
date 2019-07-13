@@ -1,18 +1,22 @@
 // LICENSE : MIT
 "use strict";
-import {RuleHelper} from "textlint-rule-helper";
+// @ts-ignore
 import {matchCaptureGroupAll} from "match-index"
+import {RuleHelper} from "textlint-rule-helper";
+import {TextlintRuleReporter} from "@textlint/types";
+
 const unorm = require("unorm");
-function reporter(context) {
+
+const reporter: TextlintRuleReporter = function (context) {
     const {Syntax, RuleError, report, fixer, getSource} = context;
     const helper = new RuleHelper(context);
     return {
-        [Syntax.Str](node){
+        [Syntax.Str](node) {
             if (helper.isChildNode(node, [Syntax.Link, Syntax.Image, Syntax.BlockQuote, Syntax.Emphasis])) {
                 return;
             }
             const text = getSource(node);
-            matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}) => {
+            matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}: { index: number }) => {
                 if (index === 0) {
                     return;
                 }
@@ -28,7 +32,8 @@ function reporter(context) {
             });
         }
     }
-}
+};
+
 module.exports = {
     linter: reporter,
     fixer: reporter
