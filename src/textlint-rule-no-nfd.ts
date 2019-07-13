@@ -1,6 +1,5 @@
 // LICENSE : MIT
 "use strict";
-// @ts-ignore
 import {matchCaptureGroupAll} from "match-index"
 import {RuleHelper} from "textlint-rule-helper";
 import {TextlintRuleReporter} from "@textlint/types";

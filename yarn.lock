@@ -2479,10 +2479,10 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.3.tgz#6155e10416efaafab665d466ce598216375195f5"
   integrity sha512-XUi5HJhhV5R74k8/0H2oCbCiYf/u4cO/rX8tnGkRvrqhsr5BRNU6Mg0yt/8UIx1iIS8220BNJsDb7XnILhLepw==
 
-match-index@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/match-index/-/match-index-1.0.1.tgz#b4b673e99ab3ac5a6af303ccf4db709812bc3f58"
-  integrity sha1-tLZz6ZqzrFpq8wPM9NtwmBK8P1g=
+match-index@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/match-index/-/match-index-1.0.2.tgz#fa4da56d9d4939aaec0a6f102241670e3f91cce1"
+  integrity sha512-Q85XYCuGBcKPL2JbxSRm56icREJW3dcyJTu5nUTkENhLIdt/KAVts53jZfj9p6bgUGWa5A9smNU+3CvmlBf+Bw==
   dependencies:
     regexp.prototype.flags "^1.1.1"
 
