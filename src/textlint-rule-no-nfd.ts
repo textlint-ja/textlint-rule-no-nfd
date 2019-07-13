@@ -15,7 +15,7 @@ const reporter: TextlintRuleReporter = function (context) {
                 return;
             }
             const text = getSource(node);
-            matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}: { index: number }) => {
+            matchCaptureGroupAll(text, /([\u309b\u309c\u309a\u3099])/g).forEach(({index}) => {
                 if (index === 0) {
                     return;
                 }
