@@ -1,4 +1,4 @@
-# textlint-rule-no-nfd [![Build Status](https://travis-ci.org/azu/textlint-rule-no-nfd.svg?branch=master)](https://travis-ci.org/azu/textlint-rule-no-nfd) [![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
+# textlint-rule-no-nfd [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-no-nfd.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-no-nfd) [![textlint rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) 
 
 [textlint](https://textlint.github.io/ "textlint") rule that disallow to use NFD like UTF8-MAC 濁点.
 
@@ -56,7 +56,7 @@ textlint --rule no-nfd README.md
 
 ## Changelog
 
-See [Releases page](https://github.com/azu/textlint-rule-no-nfd/releases).
+See [Releases page](https://github.com/textlint-ja/textlint-rule-no-nfd/releases).
 
 ## Running tests
 
@@ -102,7 +102,7 @@ via [Unicodeの特殊な文字 “結合文字列” | ものかの](http://tama
 ## Contributing
 
 Pull requests and stars are always welcome.
-For bugs and feature requests, [please create an issue](https://github.com/azu/textlint-rule-no-nfd/issues).
+For bugs and feature requests, [please create an issue](https://github.com/textlint-ja/textlint-rule-no-nfd/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`

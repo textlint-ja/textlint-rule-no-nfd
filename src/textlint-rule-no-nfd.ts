@@ -1,13 +1,16 @@
 // LICENSE : MIT
 "use strict";
-import {RuleHelper} from "textlint-rule-helper";
 import {matchCaptureGroupAll} from "match-index"
+import {RuleHelper} from "textlint-rule-helper";
+import {TextlintRuleReporter} from "@textlint/types";
+
 const unorm = require("unorm");
-function reporter(context) {
+
+const reporter: TextlintRuleReporter = function (context) {
     const {Syntax, RuleError, report, fixer, getSource} = context;
     const helper = new RuleHelper(context);
     return {
-        [Syntax.Str](node){
+        [Syntax.Str](node) {
             if (helper.isChildNode(node, [Syntax.Link, Syntax.Image, Syntax.BlockQuote, Syntax.Emphasis])) {
                 return;
             }
@@ -28,7 +31,8 @@ function reporter(context) {
             });
         }
     }
-}
+};
+
 module.exports = {
     linter: reporter,
     fixer: reporter

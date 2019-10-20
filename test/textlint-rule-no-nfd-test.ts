@@ -3,7 +3,7 @@
 const TextLintTester = require("textlint-tester");
 const tester = new TextLintTester();
 // rule
-import rule from "../src/textlint-rule-no-nfd";
+const rule = require("../src/textlint-rule-no-nfd");
 // ruleName, rule, { valid, invalid }
 tester.run("no-nfd", rule, {
     valid: [
@@ -35,7 +35,7 @@ tester.run("no-nfd", rule, {
         },
         {
             text: "エンシ\u3099ン",
-            output:"エンジン",
+            output: "エンジン",
             errors: [
                 {
                     message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "シ\u3099" => "ジ"`,
@@ -47,7 +47,7 @@ tester.run("no-nfd", rule, {
 
         {
             text: "エンシ゛ン",
-            output:"エンジン",
+            output: "エンジン",
             errors: [
                 {
                     message: `Disallow to use NFD(well-known as UTF8-MAC 濁点): "シ\u309b" => "ジ"`,
