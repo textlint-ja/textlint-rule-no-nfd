@@ -1,9 +1,9 @@
 // LICENSE : MIT
 "use strict";
-const TextLintTester = require("textlint-tester");
-const tester = new TextLintTester();
+import TextLintTester from "textlint-tester";
 // rule
-const rule = require("../src/textlint-rule-no-nfd");
+import rule from "../src/textlint-rule-no-nfd";
+const tester = new TextLintTester();
 // ruleName, rule, { valid, invalid }
 tester.run("no-nfd", rule, {
     valid: [
