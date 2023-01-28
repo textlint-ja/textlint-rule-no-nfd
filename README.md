@@ -38,7 +38,6 @@ textlint --rule no-nfd README.md
 
 `textlint --fix` での[自動修正](https://github.com/textlint/textlint/blob/master/docs/rule-fixer.md)に対応しています。
 
-
 ## Example
 
 ゜or `\u309a`
