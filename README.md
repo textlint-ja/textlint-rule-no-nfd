@@ -92,7 +92,6 @@ via [Unicodeの特殊な文字 “結合文字列” | ものかの](http://tama
 単独で存在できる゜`\u309b`と゛`\u309c`は置換することでnormalizeする。
 
 - [String.prototype.normalize() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)
-- [walling/unorm: JavaScript Unicode 8.0 Normalization - NFC, NFD, NFKC, NFKD.](https://github.com/walling/unorm)
 - [UTF-8にもいろいろある - ザリガニが見ていた...。](http://d.hatena.ne.jp/zariganitosh/20131124/utf8_nfd_nfc_bom)
 - [[JavaScript]\uXXXX形式にunicodeエスケープする関数 / LiosK-free Blog](http://liosk.blog103.fc2.com/blog-entry-67.html)
 - [unoh.github.com by unoh](http://unoh.github.io/2007/09/04/unicode-on-mac.html)
