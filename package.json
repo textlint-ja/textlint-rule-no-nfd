@@ -15,7 +15,7 @@
     "src/",
     "lib/"
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "textlint rule that disallow to use NFD like 濁点.",
   "main": "lib/textlint-rule-no-nfd.js",
   "directories": {
