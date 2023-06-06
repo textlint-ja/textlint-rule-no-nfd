@@ -2,7 +2,7 @@
 "use strict";
 import { matchCaptureGroupAll } from "match-index"
 import { RuleHelper } from "textlint-rule-helper";
-import { TextlintRuleReporter } from "@textlint/types";
+import type { TextlintRuleReporter } from "@textlint/types";
 
 const reporter: TextlintRuleReporter = function (context) {
     const { Syntax, RuleError, report, fixer, getSource, locator } = context;
